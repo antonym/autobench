@@ -5,16 +5,16 @@
 Custom built tool for provisioning a server in a bare metal automation system (MAAS in this instance),
 and kicking off a job of your choice to run and push to a Phoromatic server automatically.
 
-# Automated Server Provisioning to Phoromatic
+## Automated Server Provisioning to Phoromatic
 Revisit, existing code was working with Ubuntu MAAS, need to circle back and clean it up
 prov role was using for spinning up resources in maas and injecting the benchmark file
 
-# Manual Client Provisioning and Push to Phoromatic
+### Manual Client Provisioning and Push to Phoromatic
 
 The client tooling is useful for running a test on a client and pushing it to phoromatic
 automatically.
 
-## Setting up Phoromatic Server on Ubuntu 20.04LTS
+## Setting up Phoromatic Server on Ubuntu 20.04 LTS
 
 Uses Ubuntu 20.04LTS for the moment, can be expanded to other OS. You can run the server
 on metal or VM:
