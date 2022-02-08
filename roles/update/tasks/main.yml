@@ -1,0 +1,15 @@
+---
+- name: Install packages
+  package:
+    name:
+      - sshpass
+    state: latest
+
+- name: Update system to latest firmware
+  shell: |
+     sshpass -v -p dracpassword ssh -o "StrictHostKeyChecking no" root@{{ item.value.drac_ip }} \
+     racadm update -f catalog.gz -e downloads.dell.com/catalog -t HTTP -a TRUE
+  with_dict:
+  - "{{ benchmark_profiles }}"
+  when: item.value.enabled == true
+

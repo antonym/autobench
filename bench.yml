@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  user: root
+  roles:
+    - bench
+  vars_files:
+  - env_vars.yml

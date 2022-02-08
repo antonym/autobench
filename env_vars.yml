@@ -1,0 +1,5 @@
+maas_profile_name: autobench
+maas_api_key: 
+maas_endpoint: http://10.0.100.150:5240/MAAS
+phoromatic_endpoint: 10.0.100.178:5001/HNKOOO
+test_profile: pts/compress-gzip

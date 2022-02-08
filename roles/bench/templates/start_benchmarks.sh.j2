@@ -1,0 +1,42 @@
+#!/bin/bash
+
+VENDOR=`lscpu | grep "Vendor ID" | awk {'print $3'}`
+PLATFORM_VENDOR=`dmidecode -t 1 | grep Manufacturer | awk {'print $2'}`
+PLATFORM_MODEL=`dmidecode -t 1 | grep Product | awk '{ print $4 }'`
+BIOS_VERSION=`dmidecode -t 0 | grep Version | awk '{print $2}'`
+KERNEL_VERSION=`uname -a | awk '{print $3}'`
+SOCKET_COUNT=`lscpu | grep Socket | awk '{ print $2}'`
+MEMORY_COUNT=`dmidecode -t 17 | grep "Size.*GB" | awk '{s+=$2} END {print s}'`
+TEST_PROFILE={{ test_profile }}
+if [ $VENDOR == "GenuineIntel" ] ; then
+  MODEL=`lscpu | grep "Model name" | awk {'print $6'}`
+elif [ $VENDOR == "AuthenticAMD" ]; then
+  MODEL=`lscpu | grep "Model name" | awk {'print $5'}`
+fi
+
+IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}G | tr '[:upper:]' '[:lower:]'`
+
+export TEST_RESULTS_IDENTIFIER="${IDENTIFIER}"
+export TEST_RESULTS_NAME="${IDENTIFIER}"
+export TEST_RESULTS_DESCRIPTION="${IDENTIFIER} on BIOS version ${BIOS_VERSION} running Kernel ${KERNEL_VERSION} started at {{ ansible_date_time.iso8601 }}"
+
+echo
+echo Automated Benchmarking Tooling
+echo System Identified as ${TEST_RESULTS_IDENTIFIER}
+echo
+
+# removing any existing runs
+rm -rf /var/lib/phoronix-test-suite/test-results/${TEST_RESULTS_IDENTIFIER}
+
+# start benchmark runs
+echo Starting benchmarks...
+phoronix-test-suite make-download-cache
+phoronix-test-suite batch-install ${TEST_PROFILE}
+phoronix-test-suite batch-benchmark ${TEST_PROFILE}
+
+# upload results
+echo Uploading results...
+phoronix-test-suite phoromatic.upload-result ${TEST_RESULTS_IDENTIFIER}
+
+# spin down node
+# shutdown -h now

@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  user: root
+  roles:
+    - prov
+  vars_files:
+  - benchmark_profiles.yml
+  - env_vars.yml

@@ -1,0 +1,75 @@
+---
+- name: Install packages
+  package:
+    name:
+      - docker.io
+      - php-cli
+      - php-xml
+      - php-zip
+      - python3-pip
+      - tmux
+      - unzip
+    state: latest
+
+- name: Install python-libmaas
+  pip:
+    name: python-libmaas
+
+- name: Check out phoronix-test-suite
+  ansible.builtin.git:
+    repo: https://github.com/phoronix-test-suite/phoronix-test-suite.git
+    dest: /opt/phoronix-test-suite
+
+- name: Install latest binaries
+  command: ./install-sh
+  args:
+    chdir: /opt/phoronix-test-suite
+   
+- name: Copy configuration files
+  ansible.builtin.copy:
+    src: phoronix-test-suite.xml
+    dest: /etc/phoronix-test-suite.xml 
+    remote_src: no
+
+- name: Copy primarybench files
+  ansible.builtin.copy:
+    src: phoronix-test-suite.xml
+    dest: /etc/phoronix-test-suite.xml
+    remote_src: no
+
+- name: Create directory
+  file:
+    path: /var/lib/phoronix-test-suite/test-suites/local/primarybench-1.0.0
+    state: directory
+
+- name: Copy primarybench files
+  ansible.builtin.copy:
+    src: primarybench-1.0.0/suite-definition.xml
+    dest: /var/lib/phoronix-test-suite/test-suites/local/primarybench-1.0.0/suite-definition.xml
+    remote_src: no
+
+- name: Copy phoromatic-client systemd file
+  template:
+    src: phoromatic-client.service.j2
+    dest: /etc/systemd/system/phoromatic-client.service
+
+- name: Start phoromatic-client service
+  systemd:
+    state: started
+    daemon_reload: yes
+    name: phoromatic-client
+
+- name: Generate benchmarks template script
+  template:
+    src: start_benchmarks.sh.j2
+    dest: /root/start_benchmarks.sh
+    mode: 0744
+
+- name: Start benchmarks
+  command: "{{ item }}"
+  args:
+    chdir: /root
+  with_items:
+  - tmux new-session -d -s run_benchmarks
+  - tmux select-pane -t 0
+  - tmux send-keys "./start_benchmarks.sh" C-m

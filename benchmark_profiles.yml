@@ -1,0 +1,10 @@
+# used for ubuntu maas, can be adapted for similar automation
+benchmark_profiles:
+  TEST1:
+    enabled: true
+    drac_ip: 10.0.100.250
+    machine: R740
+    processor: 6130
+    os: focal
+    kernel: hwe-20.04
+    test: local/primarybench-1.0.0

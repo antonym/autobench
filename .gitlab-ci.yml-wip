@@ -1,0 +1,17 @@
+stages:
+  - deploy
+
+provision_nodes_to_benchmark:on-schedule:
+  stage: deploy
+  variables:
+    PLAYBOOK: "prov"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $PLAYBOOK == "update"
+      variables:
+        PLAYBOOK: "update"
+  image: ubuntu:20.04
+  script:
+    - apt update
+    - apt install -y python3-pip ansible
+    - ansible-playbook -i inventory $PLAYBOOK.yml

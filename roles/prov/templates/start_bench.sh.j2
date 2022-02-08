@@ -1,0 +1,14 @@
+#!/bin/bash
+
+apt update
+apt install -y ansible git
+git clone https://github.com/antonym/autobench.git /opt/autobench
+
+cat <<EOF > /opt/autobench/node_vars.yml
+test_profile: {{ item.value.test }}
+maas_node_name: {{ item.key }}
+maas_profile_name: {{ maas_profile_name }}
+maas_api: {{ maas_api_key }}
+EOF
+cd /opt/autobench
+ansible-playbook -i inventory bench.yml

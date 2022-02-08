@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  user: root
+  roles:
+    - update
+  vars_files:
+  - benchmark_profiles.yml

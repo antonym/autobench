@@ -1,0 +1,41 @@
+---
+
+- name: Install packages
+  package:
+    name:
+      - docker.io
+      - php-cli
+      - php-xml
+      - php-zip
+      - python3-pip
+      - tmux
+      - unzip
+    state: latest
+
+- name: Install python-libmaas
+  pip:
+    name: python-libmaas
+
+- name: login to maas node
+  command: "maas login {{ maas_endpoint }} -p {{ maas_profile_name }} --apikey {{ maas_api_key }}"
+
+- name: copy file to temp
+  template:
+    src: start_bench.sh.j2
+    dest: /tmp/start_bench_{{ item.key }}.sh
+  with_dict:
+  - "{{ benchmark_profiles }}"
+  when: item.value.enabled == true
+
+- name: get base64 of start_bench
+  shell: "base64 -w 0 /tmp/start_bench_{{ item.key }}.sh > /tmp/base_{{ item.key }}"
+  with_dict:
+  - "{{ benchmark_profiles }}"
+  when: item.value.enabled == true
+
+- name: deploy maas node
+  shell: "maas deploy {{ item.value.os }} {{ item.key }} --hwe-kernel {{ item.value.kernel }} --no-wait --b64-user-data=$(cat /tmp/base_{{ item.key }})"
+  with_dict:
+  - "{{ benchmark_profiles }}"
+  when: item.value.enabled == true
+  ignore_errors: true
