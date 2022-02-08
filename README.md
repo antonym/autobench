@@ -78,3 +78,5 @@ If you run `ansible-playbook -i localhost bench.yml` again on the client, it sho
 
 ## Results
 Once results are successfully uploaded, you can load Phoromatic click the results at the top, and select the various runs and compare them together. It may take a few seconds for the results to load after hitting compare.
+
+If you have issues downloading PDFs, you may need to increase the php `max_execution_time` from 30 to 360 by editing `/etc/php/7.4/cli/php.ini` on the Phoromatic server side. You can view the logs in `/var/log/phoromatic.log` if you have problems.
