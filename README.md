@@ -9,7 +9,7 @@ and kicking off a job of your choice to run and push to a Phoromatic server auto
 Revisit, existing code was working with Ubuntu MAAS, need to circle back and clean it up
 prov role was using for spinning up resources in maas and injecting the benchmark file
 
-# Manual Server Provisioning and Push to Phoromatic
+# Manual Client Provisioning and Push to Phoromatic
 
 The client tooling is useful for running a test on a client and pushing it to phoromatic
 automatically.
@@ -56,6 +56,7 @@ Modify `env_vars.yml` and set `phoromatic_endpoint` to the url you obtained abov
 Run:
 
 ```
+apt install -y ansible
 ansible-playbook -i localhost bench.yml
 ```
 
@@ -74,3 +75,6 @@ You will want to copy the contents of that file to `roles/bench/files/primaryben
 Modify `env_vars.yml` to reflect that updated test: `local/primarybench-1.0.0` (pts/compress-gzip was the original example given)
 
 If you run `ansible-playbook -i localhost bench.yml` again on the client, it should update things and kick off a new test. Ultimately it creates `start_benchmarks.sh` in the /root of the client machine, so you can edit and adjust that file as needed to rerun tests instead of running the ansible.
+
+## Results
+Once results are successfully uploaded, you can load Phoromatic click the results at the top, and select the various runs and compare them together. It may take a few seconds for the results to load after hitting compare.
