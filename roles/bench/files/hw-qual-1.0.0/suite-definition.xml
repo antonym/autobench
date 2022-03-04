@@ -1,0 +1,1149 @@
+<?xml version="1.0"?>
+<!--Phoronix Test Suite v10.8.1-->
+<PhoronixTestSuite>
+  <SuiteInformation>
+    <Title>hw-qual</Title>
+    <Version>1.0.0</Version>
+    <TestType>System</TestType>
+    <Description></Description>
+    <Maintainer>user</Maintainer>
+  </SuiteInformation>
+  <Execute>
+    <Test>pts/c-ray-1.2.0</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/gcrypt-1.1.3</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/fhourstones-1.1.2</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/n-queens-1.2.1</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>bt.C</Arguments>
+    <Description>Test / Class: BT.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>ep.C</Arguments>
+    <Description>Test / Class: EP.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>ep.D</Arguments>
+    <Description>Test / Class: EP.D</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>ft.C</Arguments>
+    <Description>Test / Class: FT.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>lu.C</Arguments>
+    <Description>Test / Class: LU.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>sp.B</Arguments>
+    <Description>Test / Class: SP.B</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>sp.C</Arguments>
+    <Description>Test / Class: SP.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>is.D</Arguments>
+    <Description>Test / Class: IS.D</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>mg.C</Arguments>
+    <Description>Test / Class: MG.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/npb-1.4.5</Test>
+    <Arguments>cg.C</Arguments>
+    <Description>Test / Class: CG.C</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/compress-7zip-1.8.0</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>HPL</Arguments>
+    <Description>Test / Class: G-HPL</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>PTRANS</Arguments>
+    <Description>Test / Class: G-Ptrans</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>MPIRANDOMACCESS</Arguments>
+    <Description>Test / Class: G-Random Access</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>MPIFFT</Arguments>
+    <Description>Test / Class: G-Ffte</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>STARSTREAMTRIAD</Arguments>
+    <Description>Test / Class: EP-STREAM Triad</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>STARDGEMMFLOPS</Arguments>
+    <Description>Test / Class: EP-DGEMM</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>RRINGLATENCY</Arguments>
+    <Description>Test / Class: Random Ring Latency</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>RRINGBANDWIDTH</Arguments>
+    <Description>Test / Class: Random Ring Bandwidth</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hpcc-1.2.8</Test>
+    <Arguments>MAXPPBANDWIDTH</Arguments>
+    <Description>Test / Class: Max Ping Pong Bandwidth</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/openssl-3.0.1</Test>
+    <Arguments>rsa4096</Arguments>
+    <Description>Algorithm: RSA4096</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stream-1.3.3</Test>
+    <Arguments>Copy</Arguments>
+    <Description>Type: Copy</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stream-1.3.3</Test>
+    <Arguments>Scale</Arguments>
+    <Description>Type: Scale</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stream-1.3.3</Test>
+    <Arguments>Add</Arguments>
+    <Description>Type: Add</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stream-1.3.3</Test>
+    <Arguments>Triad</Arguments>
+    <Description>Type: Triad</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>COPY -b 3</Arguments>
+    <Description>Type: Copy - Benchmark: Integer</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>COPY -b 6</Arguments>
+    <Description>Type: Copy - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>SCALE -b 3</Arguments>
+    <Description>Type: Scale - Benchmark: Integer</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>SCALE -b 6</Arguments>
+    <Description>Type: Scale - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>ADD -b 3</Arguments>
+    <Description>Type: Add - Benchmark: Integer</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>ADD -b 6</Arguments>
+    <Description>Type: Add - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>TRIAD -b 3</Arguments>
+    <Description>Type: Triad - Benchmark: Integer</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>TRIAD -b 6</Arguments>
+    <Description>Type: Triad - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>AVERAGE -b 3</Arguments>
+    <Description>Type: Average - Benchmark: Integer</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/ramspeed-1.4.3</Test>
+    <Arguments>AVERAGE -b 6</Arguments>
+    <Description>Type: Average - Benchmark: Floating Point</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.2</Test>
+    <Arguments>-r</Arguments>
+    <Description>Test: Read</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.2</Test>
+    <Arguments>-w</Arguments>
+    <Description>Test: Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cachebench-1.1.2</Test>
+    <Arguments>-b</Arguments>
+    <Description>Test: Read / Modify / Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/fs-mark-1.0.3</Test>
+    <Arguments>-L 20 -s 1048576 -n 1000</Arguments>
+    <Description>Test: 1000 Files, 1MB Size</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/fs-mark-1.0.3</Test>
+    <Arguments>-L 100 -s 1048576 -n 1000 -S 0</Arguments>
+    <Description>Test: 1000 Files, 1MB Size, No Sync/FSync</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/fs-mark-1.0.3</Test>
+    <Arguments>-L 5 -s 1048576 -n 5000 -t 4</Arguments>
+    <Description>Test: 5000 Files, 1MB Size, 4 Threads</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/fs-mark-1.0.3</Test>
+    <Arguments>-L 10 -s 1048576 -n 4000 -D 32</Arguments>
+    <Description>Test: 4000 Files, 32 Sub Dirs, 1MB Size</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/unpack-linux-1.1.1</Test>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 32 -t 4</Arguments>
+    <Description>Test: Write - Size Per Thread: 32MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 32 -t 8</Arguments>
+    <Description>Test: Write - Size Per Thread: 32MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 32 -t 16</Arguments>
+    <Description>Test: Write - Size Per Thread: 32MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 32 -t 32</Arguments>
+    <Description>Test: Write - Size Per Thread: 32MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 64 -t 4</Arguments>
+    <Description>Test: Write - Size Per Thread: 64MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 64 -t 8</Arguments>
+    <Description>Test: Write - Size Per Thread: 64MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 64 -t 16</Arguments>
+    <Description>Test: Write - Size Per Thread: 64MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 64 -t 32</Arguments>
+    <Description>Test: Write - Size Per Thread: 64MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 128 -t 4</Arguments>
+    <Description>Test: Write - Size Per Thread: 128MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 128 -t 8</Arguments>
+    <Description>Test: Write - Size Per Thread: 128MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 128 -t 16</Arguments>
+    <Description>Test: Write - Size Per Thread: 128MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 128 -t 32</Arguments>
+    <Description>Test: Write - Size Per Thread: 128MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 256 -t 4</Arguments>
+    <Description>Test: Write - Size Per Thread: 256MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 256 -t 8</Arguments>
+    <Description>Test: Write - Size Per Thread: 256MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 256 -t 16</Arguments>
+    <Description>Test: Write - Size Per Thread: 256MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -k1 -f 256 -t 32</Arguments>
+    <Description>Test: Write - Size Per Thread: 256MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 32 -t 4</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 32MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 32 -t 8</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 32MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 32 -t 16</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 32MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 32 -t 32</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 32MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 64 -t 4</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 64MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 64 -t 8</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 64MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 64 -t 16</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 64MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 64 -t 32</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 64MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 128 -t 4</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 128MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 128 -t 8</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 128MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 128 -t 16</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 128MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 128 -t 32</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 128MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 256 -t 4</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 256MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 256 -t 8</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 256MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 256 -t 16</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 256MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k2 -f 256 -t 32</Arguments>
+    <Description>Test: Random Write - Size Per Thread: 256MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 32 -t 4</Arguments>
+    <Description>Test: Read - Size Per Thread: 32MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 32 -t 8</Arguments>
+    <Description>Test: Read - Size Per Thread: 32MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 32 -t 16</Arguments>
+    <Description>Test: Read - Size Per Thread: 32MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 32 -t 32</Arguments>
+    <Description>Test: Read - Size Per Thread: 32MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 64 -t 4</Arguments>
+    <Description>Test: Read - Size Per Thread: 64MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 64 -t 8</Arguments>
+    <Description>Test: Read - Size Per Thread: 64MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 64 -t 16</Arguments>
+    <Description>Test: Read - Size Per Thread: 64MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 64 -t 32</Arguments>
+    <Description>Test: Read - Size Per Thread: 64MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 128 -t 4</Arguments>
+    <Description>Test: Read - Size Per Thread: 128MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 128 -t 8</Arguments>
+    <Description>Test: Read - Size Per Thread: 128MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 128 -t 16</Arguments>
+    <Description>Test: Read - Size Per Thread: 128MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 128 -t 32</Arguments>
+    <Description>Test: Read - Size Per Thread: 128MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 256 -t 4</Arguments>
+    <Description>Test: Read - Size Per Thread: 256MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 256 -t 8</Arguments>
+    <Description>Test: Read - Size Per Thread: 256MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 256 -t 16</Arguments>
+    <Description>Test: Read - Size Per Thread: 256MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k3 -k1 -f 256 -t 32</Arguments>
+    <Description>Test: Read - Size Per Thread: 256MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 32 -t 4</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 32MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 32 -t 8</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 32MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 32 -t 16</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 32MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 32 -t 32</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 32MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 64 -t 4</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 64MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 64 -t 8</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 64MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 64 -t 16</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 64MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 64 -t 32</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 64MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 128 -t 4</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 128MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 128 -t 8</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 128MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 128 -t 16</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 128MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 128 -t 32</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 128MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 256 -t 4</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 256MB - Thread Count: 4</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 256 -t 8</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 256MB - Thread Count: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 256 -t 16</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 256MB - Thread Count: 16</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/tiobench-1.3.1</Test>
+    <Arguments>-k2 -k1 -f 256 -t 32</Arguments>
+    <Description>Test: Random Read - Size Per Thread: 256MB - Thread Count: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/sqlite-2.1.0</Test>
+    <Arguments>1</Arguments>
+    <Description>Threads / Copies: 1</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/sqlite-2.1.0</Test>
+    <Arguments>8</Arguments>
+    <Description>Threads / Copies: 8</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/sqlite-2.1.0</Test>
+    <Arguments>32</Arguments>
+    <Description>Threads / Copies: 32</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/sqlite-2.1.0</Test>
+    <Arguments>64</Arguments>
+    <Description>Threads / Copies: 64</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/sqlite-2.1.0</Test>
+    <Arguments>128</Arguments>
+    <Description>Threads / Copies: 128</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 1</Arguments>
+    <Description>Concurrent Requests: 1</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 20</Arguments>
+    <Description>Concurrent Requests: 20</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 100</Arguments>
+    <Description>Concurrent Requests: 100</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 200</Arguments>
+    <Description>Concurrent Requests: 200</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 500</Arguments>
+    <Description>Concurrent Requests: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-2.0.0</Test>
+    <Arguments>-c 1000</Arguments>
+    <Description>Concurrent Requests: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c1</Arguments>
+    <Description>Concurrent Users: 1</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c10</Arguments>
+    <Description>Concurrent Users: 10</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c50</Arguments>
+    <Description>Concurrent Users: 50</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c100</Arguments>
+    <Description>Concurrent Users: 100</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c200</Arguments>
+    <Description>Concurrent Users: 200</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c250</Arguments>
+    <Description>Concurrent Users: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/apache-siege-1.0.5</Test>
+    <Arguments>-c500</Arguments>
+    <Description>Concurrent Users: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--cpu 0 --cpu-method all</Arguments>
+    <Description>Test: CPU Stress</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--crypt 0</Arguments>
+    <Description>Test: Crypto</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--memcpy 0</Arguments>
+    <Description>Test: Memory Copying</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--qsort 0</Arguments>
+    <Description>Test: Glibc Qsort Data Sorting</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--str 0</Arguments>
+    <Description>Test: Glibc C String Functions</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--vecmath 0</Arguments>
+    <Description>Test: Vector Math</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--matrix 0</Arguments>
+    <Description>Test: Matrix Math</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--fork 0</Arguments>
+    <Description>Test: Forking</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--msg 0</Arguments>
+    <Description>Test: System V Message Passing</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--sem 0</Arguments>
+    <Description>Test: Semaphores</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--sock 0</Arguments>
+    <Description>Test: Socket Activity</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--switch 0</Arguments>
+    <Description>Test: Context Switching</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--atomic 0</Arguments>
+    <Description>Test: Atomic</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--cache 0</Arguments>
+    <Description>Test: CPU Cache</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--malloc 0</Arguments>
+    <Description>Test: Malloc</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--memfd 0</Arguments>
+    <Description>Test: MEMFD</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--mmap 0</Arguments>
+    <Description>Test: MMAP</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--numa 0</Arguments>
+    <Description>Test: NUMA</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--rdrand 0</Arguments>
+    <Description>Test: RdRand</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--sendfile 0</Arguments>
+    <Description>Test: SENDFILE</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/stress-ng-1.4.0</Test>
+    <Arguments>--io-uring 0</Arguments>
+    <Description>Test: IO_uring</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cassandra-1.1.1</Test>
+    <Arguments>WRITE</Arguments>
+    <Description>Test: Writes</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cassandra-1.1.1</Test>
+    <Arguments>READ</Arguments>
+    <Description>Test: Reads</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cassandra-1.1.1</Test>
+    <Arguments>MIXED_1_1</Arguments>
+    <Description>Test: Mixed 1:1</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/cassandra-1.1.1</Test>
+    <Arguments>MIXED_1_3</Arguments>
+    <Description>Test: Mixed 1:3</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 1</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 1 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 1 -S</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 1 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 50</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 50 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 50 -S</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 50 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 100</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 100 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 250</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 250 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 250 -S</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 250 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 500</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 500 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1 -c 500 -S</Arguments>
+    <Description>Scaling Factor: 1 - Clients: 500 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 1</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 1 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 1 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 1 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 50</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 50 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 50 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 50 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 100</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 100 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 250</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 250 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 250 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 250 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 500</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 500 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 100 -c 500 -S</Arguments>
+    <Description>Scaling Factor: 100 - Clients: 500 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 1</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 1 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 1 -S</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 1 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 50</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 50 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 50 -S</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 50 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 100</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 100 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 250</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 250 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 250 -S</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 250 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 500</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 500 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 1000 -c 500 -S</Arguments>
+    <Description>Scaling Factor: 1000 - Clients: 500 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 1</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 1 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 1 -S</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 1 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 50</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 50 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 50 -S</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 50 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 100</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 100 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 250</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 250 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 250 -S</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 250 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 500</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 500 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 10000 -c 500 -S</Arguments>
+    <Description>Scaling Factor: 10000 - Clients: 500 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 1</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 1 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 1 -S</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 1 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 50</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 50 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 50 -S</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 50 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 100</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 100 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 100 -S</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 100 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 250</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 250 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 250 -S</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 250 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 500</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 500 - Mode: Read Write</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/pgbench-1.11.1</Test>
+    <Arguments>-s 25000 -c 500 -S</Arguments>
+    <Description>Scaling Factor: 25000 - Clients: 500 - Mode: Read Only</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t set</Arguments>
+    <Description>Test: SET</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t get</Arguments>
+    <Description>Test: GET</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t lpush</Arguments>
+    <Description>Test: LPUSH</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t lpop</Arguments>
+    <Description>Test: LPOP</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/redis-1.3.1</Test>
+    <Arguments>-t sadd</Arguments>
+    <Description>Test: SADD</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>8 250</Arguments>
+    <Description>Virtual Users: 8 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>8 500</Arguments>
+    <Description>Virtual Users: 8 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>8 1000</Arguments>
+    <Description>Virtual Users: 8 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>16 250</Arguments>
+    <Description>Virtual Users: 16 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>16 500</Arguments>
+    <Description>Virtual Users: 16 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>16 1000</Arguments>
+    <Description>Virtual Users: 16 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>32 250</Arguments>
+    <Description>Virtual Users: 32 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>32 500</Arguments>
+    <Description>Virtual Users: 32 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>32 1000</Arguments>
+    <Description>Virtual Users: 32 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>64 250</Arguments>
+    <Description>Virtual Users: 64 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>64 500</Arguments>
+    <Description>Virtual Users: 64 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>64 1000</Arguments>
+    <Description>Virtual Users: 64 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>128 250</Arguments>
+    <Description>Virtual Users: 128 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>128 500</Arguments>
+    <Description>Virtual Users: 128 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>128 1000</Arguments>
+    <Description>Virtual Users: 128 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>256 250</Arguments>
+    <Description>Virtual Users: 256 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>256 500</Arguments>
+    <Description>Virtual Users: 256 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>256 1000</Arguments>
+    <Description>Virtual Users: 256 - Warehouses: 1000</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>512 250</Arguments>
+    <Description>Virtual Users: 512 - Warehouses: 250</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>512 500</Arguments>
+    <Description>Virtual Users: 512 - Warehouses: 500</Description>
+  </Execute>
+  <Execute>
+    <Test>pts/hammerdb-postgresql-1.0.0</Test>
+    <Arguments>512 1000</Arguments>
+    <Description>Virtual Users: 512 - Warehouses: 1000</Description>
+  </Execute>
+</PhoronixTestSuite>

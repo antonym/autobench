@@ -70,9 +70,9 @@ Under Phoromatic Web Site, go to Tests, Build test suite. From there, give the t
 /var/lib/phoronix-test-suite/phoromatic/accounts/HNKOOO/suites/testtest-1.0.0/suite-definition.xml
 ```
 
-You will want to copy the contents of that file to `roles/bench/files/primarybench-1.0.0/suite-definition.xml` or you can the existing one as a start.
+You will want to copy the contents of that file to `roles/bench/files/hw-qual-1.0.0/suite-definition.xml` or you can the existing one as a start.
 
-Modify `env_vars.yml` to reflect that updated test: `local/primarybench-1.0.0` (pts/compress-gzip was the original example given)
+Modify `env_vars.yml` to reflect that updated test: `local/hw-qual-1.0.0` (pts/compress-gzip was the original example given)
 
 If you run `ansible-playbook -i localhost bench.yml` again on the client, it should update things and kick off a new test. Ultimately it creates `start_benchmarks.sh` in the /root of the client machine, so you can edit and adjust that file as needed to rerun tests instead of running the ansible.
 
