@@ -7,6 +7,7 @@ BIOS_VERSION=`dmidecode -t 0 | grep Version | awk '{print $2}'`
 KERNEL_VERSION=`uname -a | awk '{print $3}'`
 SOCKET_COUNT=`lscpu | grep Socket | awk '{ print $2}'`
 MEMORY_COUNT=`dmidecode -t 17 | grep "Size.*GB" | awk '{s+=$2} END {print s}'`
+SERIAL_NUMBER=`dmidecode -t 1 | grep Serial | awk '{ print $3 }'`
 TEST_PROFILE={{ test_profile }}
 if [ $VENDOR == "GenuineIntel" ] ; then
   MODEL=`lscpu | grep "Model name" | awk {'print $6'}`
@@ -14,7 +15,7 @@ elif [ $VENDOR == "AuthenticAMD" ]; then
   MODEL=`lscpu | grep "Model name" | awk {'print $5'}`
 fi
 
-IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}G | tr '[:upper:]' '[:lower:]'`
+IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}G-${SERIAL_NUMBER} | tr '[:upper:]' '[:lower:]'`
 
 export TEST_RESULTS_IDENTIFIER="${IDENTIFIER}"
 export TEST_RESULTS_NAME="${IDENTIFIER}"

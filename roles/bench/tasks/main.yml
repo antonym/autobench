@@ -1,15 +1,21 @@
 ---
+
+- setup:
+
+- name: Gather variables for each operating system
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "vars/{{ ansible_distribution | lower }}-{{ ansible_distribution_version | lower }}.yml"
+    - "vars/{{ ansible_distribution | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "vars/{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version | lower }}.yml"
+    - "vars/{{ ansible_distribution | lower }}.yml"
+    - "vars/{{ ansible_os_family | lower }}.yml"
+
 - name: Install packages
-  package:
-    name:
-      - docker.io
-      - php-cli
-      - php-xml
-      - php-zip
-      - python3-pip
-      - tmux
-      - unzip
+  ansible.builtin.package:
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ distro_packages }}"
 
 - name: Install python-libmaas
   pip:
@@ -73,3 +79,5 @@
   - tmux new-session -d -s run_benchmarks
   - tmux select-pane -t 0
   - tmux send-keys "./start_benchmarks.sh" C-m
+  when:
+    - start_benchmark | default(true) | bool
