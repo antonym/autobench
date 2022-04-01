@@ -37,21 +37,15 @@
     dest: /etc/phoronix-test-suite.xml 
     remote_src: no
 
-- name: Copy primarybench files
-  ansible.builtin.copy:
-    src: phoronix-test-suite.xml
-    dest: /etc/phoronix-test-suite.xml
-    remote_src: no
-
 - name: Create directory
   file:
-    path: /var/lib/phoronix-test-suite/test-suites/local/primarybench-1.0.0
+    path: /var/lib/phoronix-test-suite/test-suites/local/hw-qual-1.0.0
     state: directory
 
-- name: Copy primarybench files
+- name: Copy hw-qual files
   ansible.builtin.copy:
-    src: primarybench-1.0.0/suite-definition.xml
-    dest: /var/lib/phoronix-test-suite/test-suites/local/primarybench-1.0.0/suite-definition.xml
+    src: hw-qual-1.0.0/suite-definition.xml
+    dest: /var/lib/phoronix-test-suite/test-suites/local/hw-qual-1.0.0/suite-definition.xml
     remote_src: no
 
 - name: Copy phoromatic-client systemd file
