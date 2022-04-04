@@ -74,51 +74,6 @@
     <Test>pts/compress-7zip-1.8.0</Test>
   </Execute>
   <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>HPL</Arguments>
-    <Description>Test / Class: G-HPL</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>PTRANS</Arguments>
-    <Description>Test / Class: G-Ptrans</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>MPIRANDOMACCESS</Arguments>
-    <Description>Test / Class: G-Random Access</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>MPIFFT</Arguments>
-    <Description>Test / Class: G-Ffte</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>STARSTREAMTRIAD</Arguments>
-    <Description>Test / Class: EP-STREAM Triad</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>STARDGEMMFLOPS</Arguments>
-    <Description>Test / Class: EP-DGEMM</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>RRINGLATENCY</Arguments>
-    <Description>Test / Class: Random Ring Latency</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>RRINGBANDWIDTH</Arguments>
-    <Description>Test / Class: Random Ring Bandwidth</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/hpcc-1.2.8</Test>
-    <Arguments>MAXPPBANDWIDTH</Arguments>
-    <Description>Test / Class: Max Ping Pong Bandwidth</Description>
-  </Execute>
-  <Execute>
     <Test>pts/openssl-3.0.1</Test>
     <Arguments>rsa4096</Arguments>
     <Description>Algorithm: RSA4096</Description>
