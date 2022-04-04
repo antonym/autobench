@@ -164,29 +164,6 @@
     <Description>Test: Read / Modify / Write</Description>
   </Execute>
   <Execute>
-    <Test>pts/fs-mark-1.0.3</Test>
-    <Arguments>-L 20 -s 1048576 -n 1000</Arguments>
-    <Description>Test: 1000 Files, 1MB Size</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/fs-mark-1.0.3</Test>
-    <Arguments>-L 100 -s 1048576 -n 1000 -S 0</Arguments>
-    <Description>Test: 1000 Files, 1MB Size, No Sync/FSync</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/fs-mark-1.0.3</Test>
-    <Arguments>-L 5 -s 1048576 -n 5000 -t 4</Arguments>
-    <Description>Test: 5000 Files, 1MB Size, 4 Threads</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/fs-mark-1.0.3</Test>
-    <Arguments>-L 10 -s 1048576 -n 4000 -D 32</Arguments>
-    <Description>Test: 4000 Files, 32 Sub Dirs, 1MB Size</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/unpack-linux-1.1.1</Test>
-  </Execute>
-  <Execute>
     <Test>pts/stress-ng-1.4.0</Test>
     <Arguments>--cpu 0 --cpu-method all</Arguments>
     <Description>Test: CPU Stress</Description>
