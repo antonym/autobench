@@ -1,21 +1,36 @@
 #!/bin/bash
 
 VENDOR=`lscpu | grep "Vendor ID" | awk {'print $3'}`
-PLATFORM_VENDOR=`dmidecode -t 1 | grep Manufacturer | awk {'print $2'}`
+PLATFORM_VENDOR=`dmidecode -t 1 | grep Manufacturer | awk {'print $2'} | sed 's/,$//g'`
 PLATFORM_MODEL=`dmidecode -t 1 | grep Product | awk '{ print $4 }'`
 BIOS_VERSION=`dmidecode -t 0 | grep Version | awk '{print $2}'`
 KERNEL_VERSION=`uname -a | awk '{print $3}'`
 SOCKET_COUNT=`lscpu | grep Socket | awk '{ print $2}'`
-MEMORY_COUNT=`dmidecode -t 17 | grep "Size.*GB" | awk '{s+=$2} END {print s}'`
 SERIAL_NUMBER=`dmidecode -t 1 | grep Serial | awk '{ print $3 }'`
 TEST_PROFILE={{ test_profile }}
+
+# Get Memory Counts
+MEMORY_COUNT_MB=`dmidecode -t 17 | grep "Size.*MB" | awk '{s+=$2} END {print s}'`
+MEMORY_COUNT_GB=`dmidecode -t 17 | grep "Size.*GB" | awk '{s+=$2} END {print s}'`
+if [ ! -z ${MEMORY_COUNT_MB} ]; then
+  MEMORY_COUNT=${MEMORY_COUNT_MB}
+  MEMORY_SIZE="M"
+else
+  MEMORY_COUNT=${MEMORY_COUNT_GB}
+  MEMORY_SIZE="G"
+fi
+
 if [ $VENDOR == "GenuineIntel" ] ; then
-  MODEL=`lscpu | grep "Model name" | awk {'print $6'}`
+  MODEL=`lscpu | grep "Model name" | awk {'print $6'} | sed 's/-/_/g'`
 elif [ $VENDOR == "AuthenticAMD" ]; then
   MODEL=`lscpu | grep "Model name" | awk {'print $5'}`
 fi
 
-IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}G-${SERIAL_NUMBER} | tr '[:upper:]' '[:lower:]'`
+if [[ ${PLATFORM_VENDOR} == "VMware" ]]; then
+  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE} | tr '[:upper:]' '[:lower:]'`
+else
+  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE}-${SERIAL_NUMBER} | tr '[:upper:]' '[:lower:]'`
+fi
 
 export TEST_RESULTS_IDENTIFIER="${IDENTIFIER}"
 export TEST_RESULTS_NAME="${IDENTIFIER}"
