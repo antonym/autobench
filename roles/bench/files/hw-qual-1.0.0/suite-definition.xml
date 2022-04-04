@@ -79,26 +79,6 @@
     <Description>Algorithm: RSA4096</Description>
   </Execute>
   <Execute>
-    <Test>pts/stream-1.3.3</Test>
-    <Arguments>Copy</Arguments>
-    <Description>Type: Copy</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/stream-1.3.3</Test>
-    <Arguments>Scale</Arguments>
-    <Description>Type: Scale</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/stream-1.3.3</Test>
-    <Arguments>Add</Arguments>
-    <Description>Type: Add</Description>
-  </Execute>
-  <Execute>
-    <Test>pts/stream-1.3.3</Test>
-    <Arguments>Triad</Arguments>
-    <Description>Type: Triad</Description>
-  </Execute>
-  <Execute>
     <Test>pts/ramspeed-1.4.3</Test>
     <Arguments>COPY -b 3</Arguments>
     <Description>Type: Copy - Benchmark: Integer</Description>
