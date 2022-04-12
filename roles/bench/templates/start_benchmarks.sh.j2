@@ -1,12 +1,14 @@
 #!/bin/bash
 
 VENDOR=`lscpu | grep "Vendor ID" | awk {'print $3'}`
+PROCESSOR=`lscpu | grep "Vendor ID" | awk {'print $3'} | awk -F'Genuine|Authentic' {'print $2'}`
 PLATFORM_VENDOR=`dmidecode -t 1 | grep Manufacturer | awk {'print $2'} | sed 's/,$//g'`
 PLATFORM_MODEL=`dmidecode -t 1 | grep Product | awk '{ print $4 }'`
 BIOS_VERSION=`dmidecode -t 0 | grep Version | awk '{print $2}'`
 KERNEL_VERSION=`uname -a | awk '{print $3}'`
 SOCKET_COUNT=`lscpu | grep Socket | awk '{ print $2}'`
 SERIAL_NUMBER=`dmidecode -t 1 | grep Serial | awk '{ print $3 }'`
+OS=`hostnamectl | grep Operating | awk {'print $3'}`
 TEST_PROFILE={{ test_profile }}
 
 # Get Memory Counts
@@ -27,14 +29,14 @@ elif [ $VENDOR == "AuthenticAMD" ]; then
 fi
 
 if [[ ${PLATFORM_VENDOR} == "VMware" ]]; then
-  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE} | tr '[:upper:]' '[:lower:]'`
+  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${PROCESSOR}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE}-${OS} | tr '[:upper:]' '[:lower:]'`
 else
-  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE}-${SERIAL_NUMBER} | tr '[:upper:]' '[:lower:]'`
+  IDENTIFIER=`echo ${PLATFORM_VENDOR}-${PLATFORM_MODEL}-${PROCESSOR}-${SOCKET_COUNT}X${MODEL}-${MEMORY_COUNT}${MEMORY_SIZE}-${OS}-${SERIAL_NUMBER} | tr '[:upper:]' '[:lower:]'`
 fi
 
 export TEST_RESULTS_IDENTIFIER="${IDENTIFIER}"
 export TEST_RESULTS_NAME="${IDENTIFIER}"
-export TEST_RESULTS_DESCRIPTION="${IDENTIFIER} on BIOS version ${BIOS_VERSION} running Kernel ${KERNEL_VERSION} started at {{ ansible_date_time.iso8601 }}"
+export TEST_RESULTS_DESCRIPTION="${IDENTIFIER} on BIOS version ${BIOS_VERSION} running ${OS} with Kernel ${KERNEL_VERSION} started at {{ ansible_date_time.iso8601 }}"
 
 echo
 echo Automated Benchmarking Tooling
