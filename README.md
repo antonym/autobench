@@ -22,17 +22,31 @@ on metal or VM:
 ```
 apt update
 apt dist-upgrade
-apt install -y php-cli php-zip php-xml php-sqlite3 php-gd
+apt install -y php-cli php-zip php-xml php-sqlite3 php-gd tmux git
 git clone https://github.com/phoronix-test-suite/phoronix-test-suite.git
 cd phoronix-test-suite/
 ./install-sh
 ```
 
+## Setting up Phoromatic Server on Rocky Linux 9
+
+Under Rocky Linux 9, setup these dependencies:
+
+```
+dnf update
+dnf install php-cli php-zip php-xml php-sqlite3 php-gd tmux git
+git clone https://github.com/phoronix-test-suite/phoronix-test-suite.git
+cd phoronix-test-suite/
+./install-sh
+```
+
+## Starting the phoromatic server
+
 Can then start the server in tmux:
 ```
 phoronix-test-suite start-phoromatic-server
 ```
-
+This will generate the config file that will then need to be modified.
 Modify /etc/phoronix-test-suite.xml and set desired remote access ports:
 ```
     <Server>
